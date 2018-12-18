@@ -1,32 +1,73 @@
-.App {
-  text-align: center;
+
+.blog{
+  margin: 10px;
+  background: #FFF;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.blog .post{
+  border: 1px solid #888;
+  padding: 10px;
+  margin-bottom: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.blog .post h3{
+  padding: 5px;
+  margin: 0;
+  border-bottom: 1px solid #888;
 }
 
-.App-link {
-  color: #61dafb;
+.new-post{
+  page-break-after: 10px;
+  margin: 10px;
+  margin-bottom: 15px;
+  padding: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.new-post input,
+.new-post textarea{
+  border: 1px solid #888;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+.new-post button{
+  padding: 5px;
+  background: lightseagreen;
+  font-weight: bold;
+  border: 1px solid #448;
+}
+
+.navigation{
+  border-bottom: 1px solid #888;
+}
+
+.navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation ul li{
+  list-style: none;
+  display: inline-block;
+  border: 1px solid #448;
+  margin: 5px;
+}
+
+
+.navigation ul li a{
+  padding: 12px 15px;
+  display: block;
+  background: #EEE;
+  text-decoration: none;
+}
+
+.navigation ul li a:hover,
+.navigation ul li a:focus
+{
+  
+  background: #FFF;
 }
