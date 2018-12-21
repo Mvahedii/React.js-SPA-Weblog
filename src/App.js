@@ -8,10 +8,10 @@ import Blog from './Components/blog'
 
 class App extends Component {
   state = {
-    posts : [
-        {id:1, postTitle:'Title of Post', postBody:'Body is SomeThing About Your Page'}
+    posts: [
+      { id: 1, postTitle: 'Title of Post', postBody: 'Body is SomeThing About Your Page' }
     ]
-}
+  }
 
   newPost = (post) => {
     this.setState((oldState, props) => {
@@ -27,7 +27,7 @@ class App extends Component {
           }
         ]
       }
-      console.log(newState)
+      console.log(newState, oldState)
       return newState;
     })
   }
