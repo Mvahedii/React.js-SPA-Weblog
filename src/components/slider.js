@@ -1,12 +1,14 @@
 import React, {Component} from 'react' 
-const imgUrl = 'https://png.pngtree.com/thumb_back/fh260/back_pic/03/73/57/2557bab116b4abb.jpg'
+import './slider.css'
+
+const imgUrl = 'http://uupload.ir/files/f1ym_image-upload.png'
 
 export default class Slider extends Component {
 
     render(){
         return(
             <div>
-                <img width='100%' height='250px' src={imgUrl} alt='Slider' />
+                <img src={imgUrl} alt='Slider' />
             </div>
 
         );
