@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom'
 
+import './App.css';
 import Nav from './Components/nav'
-import Slider from './Components/slider'
 import AddNewPost from './Components/addNewPost'
 import Blog from './Components/blog'
 
@@ -35,12 +35,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <Nav />
-        <Slider />
-        <Blog posts={this.state.posts} />
-        <AddNewPost onPostCreated={this.newPost} />
-      </div>
+      <BrowserRouter>
+        <div>
+          <Route path='/' component={Nav} />
+          <Route path='/blog' render = { (props) => <Blog {...props} posts={this.state.posts} /> } />
+          <Route path='/add-new-post' render = { (props) => <AddNewPost {...props} onPostCreated={this.newPost} />} />
+        </div>
+      </BrowserRouter>
     );
   }
 }

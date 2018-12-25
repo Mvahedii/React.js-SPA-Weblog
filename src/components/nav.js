@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 import './nav.css'
 
 export default class Nav extends Component {
@@ -7,9 +8,9 @@ export default class Nav extends Component {
         return (
             <div>
                 <div className="topnav">
-                    <a className="active" href="#home">Home</a>
-                    <a href="#about">Add New Post</a>
-                    <a href="#contact">Blog</a>
+                    <Link className="active" to="/">Home</Link>
+                    <Link to="/add-new-post">Add New Post</Link>
+                    <Link to="/blog">Blog</Link>
                     <input type="text" placeholder="Search.." className='searchInput' />
                 </div>
             </div>

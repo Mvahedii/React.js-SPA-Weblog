@@ -7,7 +7,7 @@ export default class Posts extends Component {
     render() {
         return (
             <div className='post'>
-            <div className='gridContent'>
+                <div className='gridContent'>
                     {this.props.posts.map(post => (
                         <Post key={post.id} {...post} />
                     ))
