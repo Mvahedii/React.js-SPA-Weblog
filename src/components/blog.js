@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Post from './post.js'
 import './blog.css'
 
-export default class Posts extends Component {
+class Blog extends Component {
 
     render() {
         return (
@@ -17,3 +17,5 @@ export default class Posts extends Component {
         );
     }
 }
+
+export default Blog;
