@@ -31,12 +31,6 @@ class App extends Component {
     })
   }
 
-  // findPostById = (postId) => {
-  //   let post = this.state.posts
-  //   let singlePost = post.filter(post => post.id == postId)
-  //   return singlePost.length ? singlePost[0] : null
-  // }
-
   render() {
     return (
       <BrowserRouter>
@@ -58,7 +52,7 @@ class App extends Component {
     axios
       .get('https://jsonplaceholder.typicode.com/posts')
       .then((response) => {
-        let data = response.data.map(item => ({
+        let data = response.data.slice(0,6).map(item => ({
           id: item.id,
           postTitle: item.title,
           postBody: item.body
