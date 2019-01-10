@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './addNewPost.css'
-import axios from 'axios';
-// import {withRouter} from 'react-router-dom'
+import axios from '../Axios/axios-for-jsonPlaceHolder';
 
 
 class AddNewPost extends Component {
@@ -21,13 +20,13 @@ class AddNewPost extends Component {
             this.bodyInput.value = '';
             
             axios
-            .post('http://jsonplaceholder.typicode.com/posts', post)
+            .post('/posts',post)
             .then(response => {
                 this.props.onPostCreated(post);
                 this.props.history.push('/blog')
             })
             .catch(err => {
-                console.log(err)
+                console.log('addNewPost',err)
                 alert(err)
             })
             
@@ -51,4 +50,3 @@ class AddNewPost extends Component {
 }
 
 export default AddNewPost ;
-// export default withRouter(AddNewPost) ;

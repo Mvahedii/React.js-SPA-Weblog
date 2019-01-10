@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import axios from 'axios'
+import axios from './Axios/axios-for-jsonPlaceHolder'
 
 import './App.css';
 import Nav from './Components/nav'
@@ -15,8 +15,6 @@ class App extends Component {
 
   newPost = (post) => {
     this.setState((oldState, props) => {
-      console.log(oldState, 'OldState')
-      console.log(props, 'Props')
       let newState = {
         ...oldState,
         posts: [
@@ -50,7 +48,7 @@ class App extends Component {
 
   componentDidMount() {
     axios
-      .get('https://jsonplaceholder.typicode.com/posts')
+      .get('/posts')
       .then((response) => {
         let data = response.data.slice(0,6).map(item => ({
           id: item.id,

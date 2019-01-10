@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import axios from 'axios';
+import axios from '../Axios/axios-for-jsonPlaceHolder';
 
 class SinglePost extends Component {
     state = {
@@ -23,7 +23,7 @@ class SinglePost extends Component {
 
     componentDidMount() {
         axios
-            .get('https://jsonplaceholder.typicode.com/posts/' + this.props.postId)
+            .get('/posts/' + this.props.postId)
             .then(response => {
                 let post = {
                     id: response.data.id,
@@ -42,7 +42,6 @@ class SinglePost extends Component {
             })
             .catch(err => {
                 alert(err);
-                console.log(err);
             })
     }
 }
