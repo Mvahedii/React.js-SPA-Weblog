@@ -3,10 +3,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import axios from './Axios/axios-for-jsonPlaceHolder'
 
 import './App.css';
-import Nav from './Components/nav'
-import AddNewPost from './Components/addNewPost'
-import Blog from './Components/blog'
-import SinglePost from './Components/singlePost'
+import Nav from './components/nav'
+import AddNewPost from './components/addNewPost'
+import Blog from './components/blog'
+import SinglePost from './components/singlePost'
 
 class App extends Component {
   state = {
